@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="index.html">Accueil</a>
+    
     <header>
         <h1>dar EL HALWA</h1>
         <img src="image/kkk.jpg" alt="Vitrine garnie de mignardises, cornes de gazelle et makrouds">>
@@ -16,12 +16,13 @@
 
     <nav id="sommaire">
         <ul>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="#apropos">a propos</a> </li>
             <li> <a href="#services">services</a> </li>
             <li><a href="#produits">produits</a></li>
             <li><a href="#contact">contact</a></li>
-            <li><a href="#cont"></a>cont</li>
             <li><a href="carte.html">Carte des prix</a></li>
+            <li> <a href="commonde.html">Commander</a></li>
         </ul>
     </nav>
 <main>
@@ -52,18 +53,22 @@
             <legend> Votre gâteau</legend>
             <fieldset>
                 <legend>ocassion</legend>
-                <p><label for="Anniversaire"></label>Anniversaire<input type="radio" name="ocassion" id="Anniversaire" value="Anniversaire"></p>
-                <p><label for="Mariage"></label>Mariage<input type="radio" name="ocassion" id="Mariage" value="Mariage"></p>
-                <p><label for="Fiançailles">Fiançailles</label><input type="radio" name="ocassion" id="Fiançailles" value="Fiançailles"></p>
-                <p><label for="">Autre</label>Autre<input type="radio" name="ocassion" id="Autre" value="Autre"></p>
+                <p><input type="radio" name="ocassion" id="Anniversaire" value="Anniversaire"><label for="Anniversaire"></label>Anniversaire
+                <input type="radio" name="ocassion" id="Mariage" value="Mariage"><label for="Mariage"></label>Mariage
+                <input type="radio" name="ocassion" id="Fiançailles" value="Fiançailles"><label for="Fiançailles">Fiançailles</label>
+               <input type="radio" name="ocassion" id="Autre" value="Autre"></p> <label for="">Autre</label>Autre
             </fieldset>
              <p><label for="date">Date de retrait :</label><input type="date" id="date" name="date" min="2026-09-01" ></p>
              <p><label for="parts">Nombre de parts :</label><input type="number" id="parts" name="parts"min="6" 
                 max="100" step="2"value="12" ></p>
-            <p><label for="Chocolat">Chocolat</label><input type="checkbox" name=" parfums[]" id="Chocolat" checked></p>
-            <p><label for="Vanille">Vanille</label><input type="checkbox" name=" parfums[]" id="Vanille"></p>
-            <p><label for="Pistache">Pistache</label><input type="checkbox" name=" parfums[]" id="Pistache"></p>
-            <p><label for="Fruitsrouges ">Fruits rouges </label><input type="checkbox" name=" parfums[]" id="Fruitsrouges "></p>
+            <fieldset>
+                <legend>parfums</legend>
+                <p><input type="checkbox" name=" parfums[]" id="Chocolat" checked><label for="Chocolat">Chocolat</label>
+                <input type="checkbox" name=" parfums[]" id="Vanille"><label for="Vanille">Vanille</label>
+                <input type="checkbox" name=" parfums[]" id="Pistache"><label for="Pistache">Pistache</label>
+                <input type="checkbox" name=" parfums[]" id="Fruitsrouges "><label for="Fruitsrouges ">Fruits rouges </label></p>
+            </fieldset>
+            
             <p><label for="sucre">Niveau de sucre :</label><input type="range" id="sucre" name="sucre" min="0" 
                 max="10" step="1" value="5"></p>
             <p><label for="couleur">Couleur du glaçage :</label><input type="color" id="couleur" name="couleur" value="#c8912a"></p>
@@ -74,12 +79,21 @@
         <p>
         <label for="decors">Langages de décoration :</label>
         <select multiple size="4" id="decors" name="decors[]">
-        <option value="fleurs">Fleurs en pâte à sucre</option>
-        <option value="fruits">Fruits frais</option>
+            <optgroup label="Décors sucrés">
+                <option value="fleurs">Fleurs en pâte à sucre</option>
+                <option value="fruits">Fruits frais</option>
+            </optgroup>
+        <optgroup label="furits">
+            <option value="orange">orange</option>
+            <option value="banan">banan</option>
+        </optgroup>
+        
         </select>
          <p><label for="precisions">Précisions :</label><textarea id="precisions" name="precisions"
             rows="4" cols="40"maxlength="200"></textarea>
         </p>
+         <p><label for="site">Site web ou page Instagram :</label><input type="url" id="site" name="site"></p>
+         <p><label for="heure">Heure de retrait souhaitée :</label><input type="time" id="heure" name="heure"></p>
         <p>
         <button type="submit">Envoyer ma commande</button>
         <button type="reset">Tout effacer</button>
